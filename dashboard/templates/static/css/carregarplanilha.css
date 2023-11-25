@@ -1,0 +1,60 @@
+.upload-container {
+    background-color: rgb(183, 181, 181);
+    border-radius: 10px;
+    padding: 3dvh;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20dvh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2dvh;
+    font-size: 2em;
+}
+
+.botao_direcionador {
+    background-color: rgb(78, 78, 254);
+    color: white;
+    font-size: 1.2em;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.botao_direcionador:hover {
+    background-color: white;
+    color: rgb(78, 78, 254);
+    border: 2px solid rgb(78, 78, 254);
+}
+
+.texto_direcionador {
+    font-size: 1.2em;
+    padding: 1dvh;
+}
+
+input {
+    margin-bottom: 1dvh;
+    padding: 5px;
+    border: 2px solid rgb(78, 78, 254);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#progressBar {
+    width: 50%;
+    height: 20px;
+    margin-top: 10px;
+    background-color: #f0f0f0;
+}
+
+#uploadProgress {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+}
+

@@ -1,0 +1,80 @@
+.informacoes_basicas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+    height: 100px;
+    margin-right: auto;
+    border: 1px solid transparent;
+
+    border-image: linear-gradient(to right top, #bd31c4, #8e3bb0, #643b97, #413579, #282c59);
+
+    border-image-slice: 1;
+    margin-left: 1%;
+    
+
+
+}
+
+.icone{
+    color: #C040B9;
+    width: 40px;
+ 
+
+}
+
+.col-md{
+    transform: scale(0.75);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.info_mat {
+    width: 80%;
+    /* transform: scale(0.6);  */
+}
+
+.botao_personalizado {
+    background-color: #2470dc;
+    color: white;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+
+.botao_personalizado:hover {
+    border: 3px solid #2470dc;
+    background-color: white;
+    color: #2470dc;
+}
+
+.input_materias{
+    font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: lightgray;
+    color: black;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 0px;
+    border: 2px solid black;
+}
+
+table {
+    width: 50%;
+    margin: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+th, td {
+    padding: 10px;
+    color: black;
+    font-size: 1.2em;
+    text-align: center;
+    border: 1px solid black;
+}

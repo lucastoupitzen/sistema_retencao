@@ -1,0 +1,31 @@
+<!doctype html>
+
+{% load static %} 
+<html lang="pt-br">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/carregarplanilha.css'%}">
+
+    <title>Sistema Retenção</title>
+  </head>
+  <body>
+    <h1 class="titulo">Faça o upload da planilha desejada.</h1>
+    
+    <div class="upload-container">
+        <p class="texto_direcionador">Lembrete: o processo de carregamento é lento, podendo levar mais de 30 minutos.</p>
+        <input type="file" id="fileInput"/>
+        <button class="botao_direcionador" onclick="uploadFile()">Enviar</button>
+        <div id="progressBar">
+            <div id="uploadProgress"></div>
+        </div>
+    </div>
+    
+  </body>
+
+  <script src="{% static 'js/carregarPlanilha.js'%}"></script>
+
+</html>

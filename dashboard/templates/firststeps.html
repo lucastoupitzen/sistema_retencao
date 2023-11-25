@@ -1,0 +1,32 @@
+<!doctype html>
+
+{% load static %} 
+<html lang="pt-br">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/firststeps.css'%}">
+
+    <title>Sistema Retenção</title>
+  </head>
+  <body>
+    <h1 class="titulo">Bem vindo ao sistema de controle das retenções dos alunos de SI</h1>
+    <div>
+
+        <div class="direcionador">
+            <p class="texto_direcionador">Escolha uma das opções</p>
+            <div>
+              <input type="button" class="botao_direcionador" id="nova_planilha" value="Carregar nova planilha">
+              <input type="button" class="botao_direcionador" id="seguir" value="Seguir para o sistema">
+            </div>
+        </div>
+
+    </div>
+  </body>
+
+  <script src="{% static 'js/firstSteps.js'%}"></script>
+
+</html>

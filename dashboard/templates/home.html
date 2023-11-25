@@ -1,0 +1,90 @@
+<!doctype html>
+
+{% load static %} 
+<html lang="pt-br">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+
+    <title>Sistema Retenção</title>
+  </head>
+  <body>
+    <div class="container">
+      <br>
+      <div class="row">    
+        
+        <div class="col-md">
+          <br>
+
+          <h2>Alunos fora do período ideal por disciplina - Semestre ímpar:</h2>
+          <canvas id="atrasados_disciplinas_impar" width="100" height="80"></canvas>
+          <button class="botao_personalizado" id="download_pdf_impar">Baixar Relatório</button>
+      </div>
+    
+      </div>
+
+      <div class="row">    
+        
+        <div class="col-md">
+          <br>
+
+          <h2>Alunos fora do período ideal por disciplina - Semestre par:</h2>
+          <canvas id="atrasados_disciplinas_par" width="100" height="80"></canvas>
+          <button class="botao_personalizado" id="download_pdf_par">Baixar Relatório</button>
+      </div>
+    
+      </div>
+
+     
+  
+      <div class="row">
+        
+        <div class="col-md info_mat">   
+          <input type="text" id="meuInput" class="input_materias" placeholder="Digite o código da disciplina">
+          <button class="botao_personalizado" id="botaoBuscar">Buscar</button>         
+          <h2>Informações da disciplina <span id="codmat">ACH2053</span>:</h2>
+          <canvas id="informaçao_disciplina" width="100" height="80"></canvas>
+        </div>
+        
+        <div class="col-md info_mat">            
+          <h2>Alunos mais atrasados:</h2>
+          <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Aluno</th>
+                    <th>Disciplinas Atrasadas</th>
+                    <th>Ano de Ingresso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados serão carregados dinamicamente aqui -->
+            </tbody>
+        </table>
+      </div>
+
+          
+  
+      </div>
+  
+  
+  </div>
+  <br>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="{% static 'js/dashboard.js' %}"></script>
+  
+
+  <script>
+    window.onload = function(e){
+      renderiza_lista_materias_atrasados_par('{% url "lista_materias_atrasados_par" %}')
+      renderiza_lista_materias_atrasados_impar('{% url "lista_materias_atrasados_impar" %}')
+      renderiza_info_materia('{% url "retorna_info_materia" %}')
+      carregarTabela('{% url "listar_alunos_atrasados" %}');
+    }
+</script>
+
+</html>
