@@ -5,5 +5,5 @@ class JsonSerializableInterface(ABC):
     @abstractmethod
     def to_json(self) -> dict: pass
 
-    def identificador(self) -> str: pass
+    def identifier(self) -> str: pass
     
